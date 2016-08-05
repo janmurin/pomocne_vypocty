@@ -6,31 +6,42 @@
         "title": "História hradu Čičva",
         "tabName": "História",
         "assetUrl": "historia.html",
-        "images":["historia_1","historia_2","historia_3","historia_4"]
-      },
-      {
-        "title": "Architektúra hradu",
-        "tabName": "Architektúra",
-        "assetUrl": "architektura.html",
-        "images":["architektura_1","architektura_2","architektura_3","architektura_4"]
+        "images": [
+          "historia_1",
+          "historia_2",
+          "historia_3",
+          "historia_4"
+        ]
       },
       {
         "title": "Majitelia hradu",
         "tabName": "Majitelia",
         "assetUrl": "majitelia.html",
-        "images":["majitelia_1","majitelia_2","majitelia_3"]
+        "images": [
+          "majitelia_1",
+          "majitelia_2",
+          "majitelia_3"
+        ]
       },
       {
         "title": "Povesti o hrade",
         "tabName": "Povesti",
         "assetUrl": "povesti.html",
-        "images":["povesti_1","povesti_2","povesti_3","povesti_4"]
+        "images": [
+          "povesti_1",
+          "povesti_2",
+          "povesti_3",
+          "povesti_4"
+        ]
       },
       {
         "title": "Ako sa dostať na hrad",
         "tabName": "Prístup",
         "assetUrl": "pristup.html",
-        "images":["pristup_1","pristup_2"]
+        "images": [
+          "pristup_1",
+          "pristup_2"
+        ]
       }
     ]
   },
@@ -40,32 +51,43 @@
       {
         "title": "Úvod",
         "tabName": "Úvod",
-        "assetUrl": "",
-        "images":["uvod_1","uvod_2","uvod_3"]
-      },
-      {
-        "title": "Nádvorie hradu",
-        "tabName": "Nádvorie",
-        "assetUrl": "",
-        "images":["nadvorie_1"]
+        "assetUrl": "uvod.html",
+        "images": [
+          "uvod_1",
+          "uvod_2",
+          "uvod_3"
+        ]
       },
       {
         "title": "Bergfrit",
         "tabName": "Bergfrit",
-        "assetUrl": "",
-        "images":["bergfrit_1","bergfrit_2","bergfrit_3"]
+        "assetUrl": "bergfrit.html",
+        "images": [
+          "bergfrit_1",
+          "bergfrit_2",
+          "bergfrit_3"
+        ]
+      },
+      {
+        "title": "Nádvorie hradu",
+        "tabName": "Nádvorie",
+        "assetUrl": "nadvorie.html",
+        "images": [
+          "nadvorie_1",
+          "nadvorie_2",
+          "nadvorie_3",
+          "nadvorie_4"
+        ]
       },
       {
         "title": "Palácová časť",
         "tabName": "Palác",
-        "assetUrl": "",
-        "images":["palac_1","palac_2","palac_3"]
-      },
-      {
-        "title": "Okolie hradu",
-        "tabName": "Okolie",
-        "assetUrl": "",
-        "images":["okolie_1","okolie_2","okolie_3","okolie_4"]
+        "assetUrl": "palac.html",
+        "images": [
+          "palac_1",
+          "palac_2",
+          "palac_3"
+        ]
       }
     ]
   },
@@ -76,19 +98,48 @@
         "title": "Obnova hradu Čičva",
         "tabName": "Obnova",
         "assetUrl": "obnova.html",
-        "images":["obnova_1","obnova_2","obnova_3"]
+        "images": [
+          "obnova_1",
+          "obnova_2",
+          "obnova_3"
+        ]
       },
       {
         "title": "Brigády na hrade",
         "tabName": "Brigády",
         "assetUrl": "brigady.html",
-        "images":["brigady_1","brigady_2","brigady_3"]
+        "images": [
+          "brigady_1",
+          "brigady_2",
+          "brigady_3"
+        ]
       },
       {
         "title": "Akcie",
         "tabName": "Akcie",
         "assetUrl": "akcie.html",
-        "images":["akcie_1","akcie_2","akcie_3","akcie_4","akcie_5","akcie_6","akcie_7","akcie_8"]
+        "images": [
+          "akcie_1",
+          "akcie_2",
+          "akcie_3",
+          "akcie_4",
+          "akcie_5",
+          "akcie_6",
+          "akcie_7",
+          "akcie_8"
+        ]
+      },
+      {
+        "title": "Okolie hradu",
+        "tabName": "Okolie",
+        "assetUrl": "okolie.html",
+        "images": [
+          "okolie_1",
+          "okolie_2",
+          "okolie_3",
+          "okolie_4",
+          "pristup_1"
+        ]
       }
     ]
   },
@@ -99,19 +150,22 @@
         "title": "Združenie",
         "tabName": "Združenie",
         "assetUrl": "zdruzenie.html",
-        "images":["zdruzenie_1","zdruzenie_2"]
+        "images": [
+          "zdruzenie_1",
+          "zdruzenie_2"
+        ]
       },
       {
         "title": "Kontakty",
         "tabName": "Kontakty",
         "assetUrl": "kontakt.html",
-        "images":[]
+        "images": []
       },
       {
         "title": "Sponzori",
         "tabName": "Sponzori",
-        "assetUrl": "sponzori/sponzori.html",
-        "images":[]
+        "assetUrl": "sponzori.html",
+        "images": []
       }
     ]
   }

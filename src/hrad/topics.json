@@ -7,10 +7,22 @@
         "tabName": "História",
         "assetUrl": "historia.html",
         "images": [
-          "historia_1",
-          "historia_2",
-          "historia_3",
-          "historia_4"
+          {
+            "name": "historia_1",
+            "title": "Fotka hradu z medzivojnového obdobia."
+          },
+          {
+            "name": "historia_2",
+            "title": "Drevený most pod hradom, ktorý zničila nemecká armáda pri ústupe počas 2. sv. vojny."
+          },
+          {
+            "name": "historia_3",
+            "title": "Pohľad na hradný kopec od autobusovej zastávky, 60te roky."
+          },
+          {
+            "name": "historia_4",
+            "title": "Ženy v Podčičve rok 1955."
+          }
         ]
       },
       {
@@ -18,9 +30,18 @@
         "tabName": "Majitelia",
         "assetUrl": "majitelia.html",
         "images": [
-          "majitelia_1",
-          "majitelia_2",
-          "majitelia_3"
+          {
+            "name": "majitelia_1",
+            "title": "Justus van den Nypoort - rytina z roku 1686."
+          },
+          {
+            "name": "majitelia_2",
+            "title": "Alžbeta Bátoryová, majiteľka hradu v druhej polovici 16. storočia."
+          },
+          {
+            "name": "majitelia_3",
+            "title": "Žatva pod hradom, medzivojnové obdobie."
+          }
         ]
       },
       {
@@ -28,10 +49,22 @@
         "tabName": "Povesti",
         "assetUrl": "povesti.html",
         "images": [
-          "povesti_1",
-          "povesti_2",
-          "povesti_3",
-          "povesti_4"
+          {
+            "name": "povesti_1",
+            "title": ""
+          },
+          {
+            "name": "povesti_2",
+            "title": ""
+          },
+          {
+            "name": "povesti_3",
+            "title": ""
+          },
+          {
+            "name": "povesti_4",
+            "title": ""
+          }
         ]
       },
       {
@@ -39,8 +72,14 @@
         "tabName": "Prístup",
         "assetUrl": "pristup.html",
         "images": [
-          "pristup_1",
-          "pristup_2"
+          {
+            "name": "pristup_1",
+            "title": ""
+          },
+          {
+            "name": "pristup_2",
+            "title": ""
+          }
         ]
       }
     ]
@@ -53,9 +92,18 @@
         "tabName": "Úvod",
         "assetUrl": "uvod.html",
         "images": [
-          "uvod_1",
-          "uvod_2",
-          "uvod_3"
+          {
+            "name": "uvod_1",
+            "title": ""
+          },
+          {
+            "name": "uvod_2",
+            "title": ""
+          },
+          {
+            "name": "uvod_3",
+            "title": ""
+          }
         ]
       },
       {
@@ -63,9 +111,18 @@
         "tabName": "Bergfrit",
         "assetUrl": "bergfrit.html",
         "images": [
-          "bergfrit_1",
-          "bergfrit_2",
-          "bergfrit_3"
+          {
+            "name": "bergfrit_1",
+            "title": "Pohľad na poškodenú časť Bergfrítu a lanovku na prenášanie kameňov a malty."
+          },
+          {
+            "name": "bergfrit_2",
+            "title": "Severná stena hradu. Vľavo oválna bašta, vpravo britová veža."
+          },
+          {
+            "name": "bergfrit_3",
+            "title": "Murovanie diery v múre pod Bergfritom za pomoci majstrov zo Šarišského hradu."
+          }
         ]
       },
       {
@@ -73,10 +130,22 @@
         "tabName": "Nádvorie",
         "assetUrl": "nadvorie.html",
         "images": [
-          "nadvorie_1",
-          "nadvorie_2",
-          "nadvorie_3",
-          "nadvorie_4"
+          {
+            "name": "nadvorie_1",
+            "title": "Pohľad na nádvorie hradu počas Výstupu na 101 hradov a zámkov."
+          },
+          {
+            "name": "nadvorie_2",
+            "title": ""
+          },
+          {
+            "name": "nadvorie_3",
+            "title": ""
+          },
+          {
+            "name": "nadvorie_4",
+            "title": ""
+          }
         ]
       },
       {
@@ -84,9 +153,18 @@
         "tabName": "Palác",
         "assetUrl": "palac.html",
         "images": [
-          "palac_1",
-          "palac_2",
-          "palac_3"
+          {
+            "name": "palac_1",
+            "title": ""
+          },
+          {
+            "name": "palac_2",
+            "title": ""
+          },
+          {
+            "name": "palac_3",
+            "title": ""
+          }
         ]
       }
     ]
@@ -99,9 +177,18 @@
         "tabName": "Obnova",
         "assetUrl": "obnova.html",
         "images": [
-          "obnova_1",
-          "obnova_2",
-          "obnova_3"
+          {
+            "name": "obnova_1",
+            "title": "8 statočných na hrade čičva."
+          },
+          {
+            "name": "obnova_2",
+            "title": ""
+          },
+          {
+            "name": "obnova_3",
+            "title": ""
+          }
         ]
       },
       {
@@ -109,9 +196,18 @@
         "tabName": "Brigády",
         "assetUrl": "brigady.html",
         "images": [
-          "brigady_1",
-          "brigady_2",
-          "brigady_3"
+          {
+            "name": "brigady_1",
+            "title": "Obrázky zo začiatku činnosti združenia z roku 2014."
+          },
+          {
+            "name": "brigady_2",
+            "title": "Doprava kameňov na murovanie na dolné nádvorie."
+          },
+          {
+            "name": "brigady_3",
+            "title": "Príprava malty na murovanie."
+          }
         ]
       },
       {
@@ -119,14 +215,38 @@
         "tabName": "Akcie",
         "assetUrl": "akcie.html",
         "images": [
-          "akcie_1",
-          "akcie_2",
-          "akcie_3",
-          "akcie_4",
-          "akcie_5",
-          "akcie_6",
-          "akcie_7",
-          "akcie_8"
+          {
+            "name": "akcie_1",
+            "title": "Výstup na hrad v rámci Turistického dňa 2016."
+          },
+          {
+            "name": "akcie_2",
+            "title": "Nádvorie hradu s účastníkmi výstupu na hrad v októbri 2015."
+          },
+          {
+            "name": "akcie_3",
+            "title": "Letná pohoda na nádvorí hradu."
+          },
+          {
+            "name": "akcie_4",
+            "title": "Letná stanovačka na hrade."
+          },
+          {
+            "name": "akcie_5",
+            "title": "Splav rieky Ondava."
+          },
+          {
+            "name": "akcie_6",
+            "title": "Splav rieky Ondava."
+          },
+          {
+            "name": "akcie_7",
+            "title": "Pohľad na hrad Čičva a prírodný amfiteáter od rieky Ondava."
+          },
+          {
+            "name": "akcie_8",
+            "title": "Príprava na večerné premietanie filmov."
+          }
         ]
       },
       {
@@ -134,11 +254,26 @@
         "tabName": "Okolie",
         "assetUrl": "okolie.html",
         "images": [
-          "okolie_1",
-          "okolie_2",
-          "okolie_3",
-          "okolie_4",
-          "pristup_1"
+          {
+            "name": "okolie_1",
+            "title": ""
+          },
+          {
+            "name": "okolie_2",
+            "title": "Hrobka rodiny Barkóczy, posledných majiteľov hradu, postavená v roku 1909."
+          },
+          {
+            "name": "okolie_3",
+            "title": ""
+          },
+          {
+            "name": "okolie_4",
+            "title": ""
+          },
+          {
+            "name": "pristup_1",
+            "title": ""
+          }
         ]
       }
     ]
@@ -151,8 +286,14 @@
         "tabName": "Združenie",
         "assetUrl": "zdruzenie.html",
         "images": [
-          "zdruzenie_1",
-          "zdruzenie_2"
+          {
+            "name": "zdruzenie_1",
+            "title": "Čerpanie vody do nádrže za asistencie miestnych dobrovoľných hasičov."
+          },
+          {
+            "name": "zdruzenie_2",
+            "title": "Prenos stavebného materiálu z nádvoria pod britovú vežu."
+          }
         ]
       },
       {

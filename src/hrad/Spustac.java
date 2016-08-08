@@ -39,7 +39,7 @@ public class Spustac {
                         System.out.println("a" + i + "" + j + ".assetUrl=\"" + a.assetUrl.replaceAll("\"", "\\\\\"") + "\";");
                     }
                     for(int k=0; k<a.images.size(); k++){
-                        System.out.println("a" + i + "" + j + ".images.add(\""+a.images.get(k)+"\");");
+                        System.out.println("a" + i + "" + j + ".images.add(new Image(\""+a.images.get(k).name+"\",\"" + a.images.get(k).title + "\") );");
                     }
                     System.out.println("m" + i + ".articles.add(a" + i + "" + j + ");");
                 }

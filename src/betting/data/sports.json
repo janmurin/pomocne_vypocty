@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "Football",
+    "name_SK": "Futbal"
+  },
+  {
+    "id": "2",
+    "name": "Hockey",
+    "name_SK": "Hokej"
+  },
+  {
+    "id": "3",
+    "name": "Tennis",
+    "name_SK": "Tenis"
+  },
+  {
+    "id": "4",
+    "name": "Basketball",
+    "name_SK": "Basketbal"
+  },
+  {
+    "id": "5",
+    "name": "Handball",
+    "name_SK": "Hádzaná"
+  },
+  {
+    "id": "6",
+    "name": "Volleyball",
+    "name_SK": "Volejbal"
+  },
+  {
+    "id": "7",
+    "name": "Baseball",
+    "name_SK": "Baseball"
+  },
+  {
+    "id": "8",
+    "name": "American Football",
+    "name_SK": "Americký futbal"
+  }
+]

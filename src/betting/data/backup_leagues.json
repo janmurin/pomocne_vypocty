@@ -1,0 +1,653 @@
+[
+  {
+    "id": "1",
+    "name_SK": "2.Fínsko",
+    "country_ID": "2",
+    "country_name": "Fínsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "3",
+    "name_SK": "2.Írsko",
+    "country_ID": "3",
+    "country_name": "Írsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "4",
+    "name_SK": "1.Kolumbia",
+    "country_ID": "4",
+    "country_name": "Kolumbia",
+    "sport_ID": "1"
+  },
+  {
+    "id": "5",
+    "name_SK": "2.Island",
+    "country_ID": "5",
+    "country_name": "Island",
+    "sport_ID": "1"
+  },
+  {
+    "id": "6",
+    "name_SK": "Rakúsky pohár",
+    "country_ID": "6",
+    "country_name": "Rakúsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "7",
+    "name_SK": "1.Island",
+    "country_ID": "5",
+    "country_name": "Island",
+    "sport_ID": "1"
+  },
+  {
+    "id": "8",
+    "name_SK": "1.Fínsko",
+    "country_ID": "2",
+    "country_name": "Fínsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "9",
+    "name_SK": "1.J.Kórea",
+    "country_ID": "7",
+    "country_name": "Južná Kórea",
+    "sport_ID": "1"
+  },
+  {
+    "id": "10",
+    "name_SK": "1.Bosna/Herc.",
+    "country_ID": "8",
+    "country_name": "Bosna/Herc.",
+    "sport_ID": "1"
+  },
+  {
+    "id": "11",
+    "name_SK": "Mexický pohár",
+    "country_ID": "9",
+    "country_name": "Mexiko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "13",
+    "name_SK": "2.Chile",
+    "country_ID": "10",
+    "country_name": "Čile",
+    "sport_ID": "1"
+  },
+  {
+    "id": "14",
+    "name_SK": "1.Česko",
+    "country_ID": "11",
+    "country_name": "Česko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "15",
+    "name_SK": "1.Brazília",
+    "country_ID": "12",
+    "country_name": "Brazília",
+    "sport_ID": "1"
+  },
+  {
+    "id": "16",
+    "name_SK": "Poľský pohár",
+    "country_ID": "13",
+    "country_name": "Poľsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "17",
+    "name_SK": "1.Maďarsko",
+    "country_ID": "14",
+    "country_name": "Maďarsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "18",
+    "name_SK": "2.Rusko",
+    "country_ID": "15",
+    "country_name": "Rusko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "19",
+    "name_SK": "1.Estónsko",
+    "country_ID": "16",
+    "country_name": "Estónsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "20",
+    "name_SK": "Bieloruský pohár",
+    "country_ID": "17",
+    "country_name": "Bielorusko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "22",
+    "name_SK": "1.Rakúsko",
+    "country_ID": "6",
+    "country_name": "Rakúsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "23",
+    "name_SK": "2.Dánsko",
+    "country_ID": "18",
+    "country_name": "Dánsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "24",
+    "name_SK": "2.Brazília",
+    "country_ID": "12",
+    "country_name": "Brazília",
+    "sport_ID": "1"
+  },
+  {
+    "id": "25",
+    "name_SK": "Holandský Superpohár",
+    "country_ID": "19",
+    "country_name": "Holandsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "26",
+    "name_SK": "3.Švédsko-sever",
+    "country_ID": "20",
+    "country_name": "Švédsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "27",
+    "name_SK": "2.Švédsko",
+    "country_ID": "20",
+    "country_name": "Švédsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "28",
+    "name_SK": "Ukrajinský Superpohár",
+    "country_ID": "21",
+    "country_name": "Ukrajina",
+    "sport_ID": "1"
+  },
+  {
+    "id": "31",
+    "name_SK": "1.Bulharsko",
+    "country_ID": "23",
+    "country_name": "Bulharsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "32",
+    "name_SK": "1.Belgicko",
+    "country_ID": "24",
+    "country_name": "Belgicko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "33",
+    "name_SK": "1.Srbsko",
+    "country_ID": "25",
+    "country_name": "Srbsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "34",
+    "name_SK": "1.Ukrajina",
+    "country_ID": "21",
+    "country_name": "Ukrajina",
+    "sport_ID": "1"
+  },
+  {
+    "id": "35",
+    "name_SK": "Ruský Superpohár",
+    "country_ID": "15",
+    "country_name": "Rusko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "36",
+    "name_SK": "1.Ekvádor",
+    "country_ID": "26",
+    "country_name": "Ekvádor",
+    "sport_ID": "1"
+  },
+  {
+    "id": "37",
+    "name_SK": "1.Slovinsko",
+    "country_ID": "27",
+    "country_name": "Slovinsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "38",
+    "name_SK": "1.Bielorusko",
+    "country_ID": "17",
+    "country_name": "Bielorusko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "39",
+    "name_SK": "2.Rakúsko",
+    "country_ID": "6",
+    "country_name": "Rakúsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "40",
+    "name_SK": "Taliansky pohár",
+    "country_ID": "29",
+    "country_name": "Taliansko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "41",
+    "name_SK": "2.USA",
+    "country_ID": "22",
+    "country_name": "USA",
+    "sport_ID": "1"
+  },
+  {
+    "id": "42",
+    "name_SK": "1.Chile",
+    "country_ID": "10",
+    "country_name": "Čile",
+    "sport_ID": "1"
+  },
+  {
+    "id": "43",
+    "name_SK": "Škótsky ligový pohár",
+    "country_ID": "30",
+    "country_name": "Škótsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "45",
+    "name_SK": "Argentínsky pohár",
+    "country_ID": "31",
+    "country_name": "Argentína",
+    "sport_ID": "1"
+  },
+  {
+    "id": "46",
+    "name_SK": "2.Poľsko",
+    "country_ID": "13",
+    "country_name": "Poľsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "47",
+    "name_SK": "1.Japonsko",
+    "country_ID": "33",
+    "country_name": "Japonsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "49",
+    "name_SK": "1.Vietnam",
+    "country_ID": "34",
+    "country_name": "Vietnam",
+    "sport_ID": "1"
+  },
+  {
+    "id": "51",
+    "name_SK": "1.Rumunsko",
+    "country_ID": "35",
+    "country_name": "Rumunsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "52",
+    "name_SK": "Brazílsky pohár",
+    "country_ID": "12",
+    "country_name": "Brazília",
+    "sport_ID": "1"
+  },
+  {
+    "id": "53",
+    "name_SK": "2.Mexiko",
+    "country_ID": "9",
+    "country_name": "Mexiko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "54",
+    "name_SK": "Kolumbijský pohár",
+    "country_ID": "4",
+    "country_name": "Kolumbia",
+    "sport_ID": "1"
+  },
+  {
+    "id": "56",
+    "name_SK": "1.Mexiko",
+    "country_ID": "9",
+    "country_name": "Mexiko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "57",
+    "name_SK": "1.Nórsko",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "58",
+    "name_SK": "2.Nórsko",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "59",
+    "name_SK": "1.Litva",
+    "country_ID": "38",
+    "country_name": "Litva",
+    "sport_ID": "1"
+  },
+  {
+    "id": "60",
+    "name_SK": "1.Kazachstan",
+    "country_ID": "39",
+    "country_name": "Kazachstan",
+    "sport_ID": "1"
+  },
+  {
+    "id": "61",
+    "name_SK": "Poľský Superpohár",
+    "country_ID": "13",
+    "country_name": "Poľsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "62",
+    "name_SK": "1.Guatemala",
+    "country_ID": "40",
+    "country_name": "Guatemala",
+    "sport_ID": "1"
+  },
+  {
+    "id": "63",
+    "name_SK": "1.Rusko",
+    "country_ID": "15",
+    "country_name": "Rusko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "65",
+    "name_SK": "3.Fínsko A",
+    "country_ID": "2",
+    "country_name": "Fínsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "66",
+    "name_SK": "Belgický Superpohár",
+    "country_ID": "24",
+    "country_name": "Belgicko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "67",
+    "name_SK": "3.Fínsko B",
+    "country_ID": "2",
+    "country_name": "Fínsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "68",
+    "name_SK": "3.Fínsko C",
+    "country_ID": "2",
+    "country_name": "Fínsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "70",
+    "name_SK": "1.Egypt",
+    "country_ID": "36",
+    "country_name": "Egypt",
+    "sport_ID": "1"
+  },
+  {
+    "id": "71",
+    "name_SK": "1.Honduras",
+    "country_ID": "41",
+    "country_name": "Honduras",
+    "sport_ID": "1"
+  },
+  {
+    "id": "72",
+    "name_SK": "Izraelský ligový pohár",
+    "country_ID": "42",
+    "country_name": "Izrael",
+    "sport_ID": "1"
+  },
+  {
+    "id": "73",
+    "name_SK": "Rumunský Superpohár",
+    "country_ID": "35",
+    "country_name": "Rumunsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "74",
+    "name_SK": "1.Írsko",
+    "country_ID": "3",
+    "country_name": "Írsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "75",
+    "name_SK": "1.Kanada",
+    "country_ID": "43",
+    "country_name": "Kanada",
+    "sport_ID": "1"
+  },
+  {
+    "id": "76",
+    "name_SK": "1.Poľsko",
+    "country_ID": "13",
+    "country_name": "Poľsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "77",
+    "name_SK": "Chile Cup",
+    "country_ID": "10",
+    "country_name": "Čile",
+    "sport_ID": "1"
+  },
+  {
+    "id": "79",
+    "name_SK": "1.Paraguay",
+    "country_ID": "44",
+    "country_name": "Paraguay",
+    "sport_ID": "1"
+  },
+  {
+    "id": "80",
+    "name_SK": "2.Švajčiarsko",
+    "country_ID": "45",
+    "country_name": "Švajčiarsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "81",
+    "name_SK": "1.Švajčiarsko",
+    "country_ID": "45",
+    "country_name": "Švajčiarsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "83",
+    "name_SK": "1.Čína",
+    "country_ID": "46",
+    "country_name": "Čína",
+    "sport_ID": "1"
+  },
+  {
+    "id": "84",
+    "name_SK": "Rumunský ligový pohár",
+    "country_ID": "35",
+    "country_name": "Rumunsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "85",
+    "name_SK": "2.Slovensko-západ",
+    "country_ID": "28",
+    "country_name": "Slovensko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "86",
+    "name_SK": "2.Japonsko",
+    "country_ID": "33",
+    "country_name": "Japonsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "87",
+    "name_SK": "1.Lotyšsko",
+    "country_ID": "47",
+    "country_name": "Lotyšsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "88",
+    "name_SK": "Portugalský ligový pohár",
+    "country_ID": "48",
+    "country_name": "Portugalsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "89",
+    "name_SK": "3.Nórsko-sk.1",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "90",
+    "name_SK": "3.Nórsko-sk.2",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "91",
+    "name_SK": "3.Nórsko-sk.3",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "92",
+    "name_SK": "3.Nórsko-sk.4",
+    "country_ID": "37",
+    "country_name": "Nórsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "93",
+    "name_SK": "2.Francúzsko",
+    "country_ID": "49",
+    "country_name": "Francúzsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "94",
+    "name_SK": "1.USA",
+    "country_ID": "22",
+    "country_name": "USA",
+    "sport_ID": "1"
+  },
+  {
+    "id": "95",
+    "name_SK": "1.Chorvátsko",
+    "country_ID": "50",
+    "country_name": "Chorvátsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "96",
+    "name_SK": "Islandský pohár",
+    "country_ID": "19",
+    "country_name": "Holandsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "97",
+    "name_SK": "3.Švédsko-juh",
+    "country_ID": "20",
+    "country_name": "Švédsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "98",
+    "name_SK": "1.Panama",
+    "country_ID": "51",
+    "country_name": "Panama",
+    "sport_ID": "1"
+  },
+  {
+    "id": "99",
+    "name_SK": "J.Kórea pohár",
+    "country_ID": "7",
+    "country_name": "Južná Kórea",
+    "sport_ID": "1"
+  },
+  {
+    "id": "100",
+    "name_SK": "1.Švédsko",
+    "country_ID": "20",
+    "country_name": "Švédsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "103",
+    "name_SK": "3.Nemecko",
+    "country_ID": "52",
+    "country_name": "Nemecko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "104",
+    "name_SK": "1.Dánsko",
+    "country_ID": "18",
+    "country_name": "Dánsko",
+    "sport_ID": "1"
+  },
+  {
+    "id": "106",
+    "name_SK": "1.Venezuela",
+    "country_ID": "53",
+    "country_name": "Venezuela",
+    "sport_ID": "1"
+  },
+  {
+    "id": "107",
+    "name_SK": "1.Peru",
+    "country_ID": "54",
+    "country_name": "Peru",
+    "sport_ID": "1"
+  },
+  {
+    "id": "108",
+    "name_SK": "1.Kostarika",
+    "country_ID": "55",
+    "country_name": "Kostarika",
+    "sport_ID": "1"
+  },
+  {
+    "id": "110",
+    "name_SK": "1.Austrália",
+    "country_ID": "56",
+    "country_name": "Austrália",
+    "sport_ID": "2"
+  }
+]

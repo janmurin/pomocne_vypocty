@@ -2,41 +2,49 @@
   {
     "id": "1",
     "name": "Football",
-    "name_SK": "Futbal"
+    "name_SK": "Futbal",
+    "leagueRequired":"true"
   },
   {
     "id": "2",
     "name": "Hockey",
-    "name_SK": "Hokej"
+    "name_SK": "Hokej",
+    "leagueRequired":"true"
   },
   {
     "id": "3",
     "name": "Tennis",
-    "name_SK": "Tenis"
+    "name_SK": "Tenis",
+    "leagueRequired":"false"
   },
   {
     "id": "4",
     "name": "Basketball",
-    "name_SK": "Basketbal"
+    "name_SK": "Basketbal",
+    "leagueRequired":"true"
   },
   {
     "id": "5",
     "name": "Handball",
-    "name_SK": "Hádzaná"
+    "name_SK": "Hádzaná",
+    "leagueRequired":"true"
   },
   {
     "id": "6",
     "name": "Volleyball",
-    "name_SK": "Volejbal"
+    "name_SK": "Volejbal",
+    "leagueRequired":"true"
   },
   {
     "id": "7",
     "name": "Baseball",
-    "name_SK": "Baseball"
+    "name_SK": "Baseball",
+    "leagueRequired":"true"
   },
   {
     "id": "8",
     "name": "American Football",
-    "name_SK": "Americký futbal"
+    "name_SK": "Americký futbal",
+    "leagueRequired":"true"
   }
 ]

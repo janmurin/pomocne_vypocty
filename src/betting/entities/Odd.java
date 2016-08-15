@@ -7,5 +7,5 @@ public class Odd {
 
     public String key;
     public double value;
-    public int status;
+    public int status=-1;
 }

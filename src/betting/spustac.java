@@ -21,6 +21,7 @@ public class spustac {
     private List<League> leagues;
     private List<CleanBetEvent> eventyMesiaca;
     private List<EventType> eventTypes;
+    private List<Competitor> competitors;
 
     public static void main(String[] args) {
         spustac spustac = new spustac();
@@ -34,6 +35,7 @@ public class spustac {
         sports = new ArrayList<>();
         leagues = new ArrayList<>();
         countries = new ArrayList<>();
+        competitors = new ArrayList<>();
 
         try {
             countries = mapper.readValue(new File("src\\betting\\data\\countries.json"), new TypeReference<List<Country>>() {
@@ -44,7 +46,10 @@ public class spustac {
             });
             eventTypes = mapper.readValue(new File("src\\betting\\data\\eventTypes.json"), new TypeReference<List<EventType>>() {
             });
-            eventyMesiaca = mapper.readValue(new File("C:\\Users\\jan.murin\\Google Drive\\mockupDB.json"), new TypeReference<List<CleanBetEvent>>() {
+            competitors = mapper.readValue(new File("src\\betting\\data\\competitors.json"), new TypeReference<List<Competitor>>() {
+            });
+            //eventyMesiaca = mapper.readValue(new File("C:\\Users\\jan.murin\\Google Drive\\mockupDB.json"), new TypeReference<List<CleanBetEvent>>() {
+            eventyMesiaca = mapper.readValue(new File("C:\\Users\\janmu\\Google Drive\\mockupDB.json"), new TypeReference<List<CleanBetEvent>>() {
             });
         } catch (IOException ex) {
             Logger.getLogger(spustac.class.getName()).log(Level.SEVERE, null, ex);
@@ -62,98 +67,64 @@ public class spustac {
         loadEntities();
         // mame nacitane podporovane sports, ligy, eventy a ideme vybrat tie udalosti z databazy,
         // ktore obsahuju vsetky nase podporovane polozky
-        List<UnsupportedBetEvent> unsupportedEvents = new ArrayList<>();
         Set<String> unsupportedSports = new HashSet<>();
         Set<String> unsupportedLeagues = new HashSet<>();
         Set<String> unsupportedEventTypes = new HashSet<>();
-        // Set<String> unsupportedCompetitors = new HashSet<>();
-        List<CleanBetEvent> supportedEvents = new ArrayList<>();
-        List<Competitor> competitors = new ArrayList<>();
-        Map<String, Map<String, Set<String>>> competitorsMap = new HashMap<>();
-        for (Sport s : sports) {
-            competitorsMap.put(s.name_SK, new HashMap<String, Set<String>>());
-        }
-        for (League league : leagues) {
-            Sport s = getSportFromID(league);
-            competitorsMap.get(s.name_SK).put(league.name_SK, new HashSet<String>());
-        }
-        competitorsMap.get("Tenis").put("Tenis", new HashSet<String>());
-        System.out.println(competitorsMap);
+        Set<String> unsupportedCompetitors = new HashSet<>();
+        List<SupportedBetEvent> supportedEvents = new ArrayList<>();
+
 
         for (CleanBetEvent cbe : eventyMesiaca) {
-            int competitorID = 0;
+            // hlavnym cielom je zistit ci tento event je podporovany a ak ano tak ho pridat do zoznamu eventov
+            boolean supported = true;
             Sport sport = getSportForBetEvent(cbe);
             League league = getLeagueForBetEvent(cbe);
             EventType eventType = getEventTypeForBetEvent(cbe);
-            // competitorID = getCompetitorID(cbe); COMPETITOR JE DEFAULTNE PODPOROVANY, JEDINE ZE JE DUPLICITA
-            boolean supported = true;
-            // ak nemame podporovany sport, typ udalosti alebo competitora tak je cely event nepodporovany
-            // ak si nejaky sport vyzaduje aj podporu pre ligu
-            if (sport == null || eventType == null || competitorID == -1) {
-                supported = false;
-            }
-            if (sport.leagueRequired && league == null) {
-                supported = false;
-                unsupportedLeagues.add(sport.name_SK + " " + cbe.getLiga());
-            }
+
             if (sport == null) {
+                // ak sa nepodporuje dany sport tak ostatne nema zmysel riesit
+                supported = false;
                 unsupportedSports.add(cbe.getSport());
-            }
-            if (eventType == null) {
-                unsupportedEventTypes.add(cbe.getTypEventu());
-            }
-            if (!supported) {
-                UnsupportedBetEvent ube = new UnsupportedBetEvent();
-                ube.betEvent = cbe;
-                ube.isCompetitorSupported = (competitorID != -1);
-                ube.isEventTypeSupported = (eventType != null);
-                ube.isLeagueSupported = (league != null);
-                ube.isSportSupported = (sport != null);
-                unsupportedEvents.add(ube);
             } else {
-                supportedEvents.add(cbe);
-            }
-            // ked je sport aj liga supportovana, tak automaticky pridame competitora
-            if (sport != null) {
-                if (league != null) {
-                    // pridame competitora ku sportu aj lige
-                    String[] competitori = parseCompetitors(cbe.getCompetitors());
-                    for (int i = 0; i < competitori.length; i++) {
-                        if (!competitorsMap.get(sport.name_SK).get(league.name_SK).contains(competitori[i])) {
-                            competitorsMap.get(sport.name_SK).get(league.name_SK).add(competitori[i]);
-                            Competitor novy = new Competitor();
-                            novy.league_ID = league.id;
-                            novy.sport_ID = sport.id;
-                            novy.name = competitori[i];
-                            competitors.add(novy);
-                        }
+                // mame sport, ak sa vyzaduje liga tak musime mat ligu, ak nie tak ligu neriesime
+                if (league == null) {
+                    // nemame ligu, bud taku ligu nemame v databaze alebo pre nas nie je relevantna napriklad pri tenise
+                    if (sport.leagueRequired) {
+                        supported = false;
+                        unsupportedLeagues.add(sport.name_SK + " " + cbe.getLiga());
+                    } else {
+                        // ligu neriesime, spravime si defaultnu ligu
+                        league = new League();
+                        league.id = 0;
                     }
-                } else if (!sport.leagueRequired) {
-                    // ak podporujeme sport ale nepodporujeme ligu, tak ak ligu nemusime podporovat (napriklad Tenis),
-                    // tak este mozeme tiez pridat competitora, ale u competitora uz je liga irelevantna
-                    String[] competitori = parseCompetitors(cbe.getCompetitors());
-                    for (int i = 0; i < competitori.length; i++) {
-                        try {
-                            if (!competitorsMap.get(sport.name_SK)
-                                    .get(sport.name_SK)
-                                    .contains(competitori[i])) {
-                                competitorsMap.get(sport.name_SK).get(sport.name_SK).add(competitori[i]);
-                                Competitor novy = new Competitor();
-                                //novy.league_ID = league.id; //ligu nam netreba lebo je to tenis napriklad a tma je liga nepodstatna
-                                novy.sport_ID = sport.id;
-                                novy.name = competitori[i];
-                                competitors.add(novy);
-                            }
-                        } catch (Exception e) {
-                            System.out.println("sportname: " + sport.name_SK);
-                            Logger.getLogger(spustac.class.getName()).log(Level.SEVERE, null, e);
-                            throw e;
+                } else {
+                    // sport aj liga eventu su sparovane so sportom aj ligou v databaze
+                }
+            }
+            if (supported) {
+                // mame sport aj ligu podporovanu, zistime ci je aj eventtype podporovany
+                if (eventType == null) {
+                    supported = false;
+                    unsupportedEventTypes.add(cbe.getTypEventu());
+                } else {
+                    // mame podporovany sport, ligu aj eventtype, uz len aby boli podporovani competitori a mozeme pridat do zoznamu event
+                    Competitor[] competitors = getSupportedCompetitors(cbe, league, sport);
+                    if (competitors[0].id == 0 || competitors[1].id == 0) { // musia mat id>0 inac su to defaultni competitori a nie ti z databazy
+                        //supported=false; uz nam netreba pridavat lebo s tym viacej nepracujeme
+                        if (competitors[0].id == 0) {
+                            unsupportedCompetitors.add("sport=" + sport.name_SK + ", league=" + league.name_SK + ", competitor=" + competitors[0].name + "<-");
                         }
+                        if (competitors[1].id == 0) {
+                            unsupportedCompetitors.add("sport=" + sport.name_SK + ", league=" + league.name_SK + ", competitor=" + competitors[1].name + "<-");
+                        }
+                    } else {
+                        supportedEvents.add(new SupportedBetEvent(sport, league, eventType, competitors[0], competitors[1], cbe));
                     }
                 }
             }
         }
 
+        // povypisujeme co vsetko nemame podporovane
         System.out.println("UNSUPPORTED");
         System.out.println("SPORTS " + unsupportedSports.size());
         for (String s : unsupportedSports) {
@@ -170,13 +141,15 @@ public class spustac {
             System.out.println(s);
         }
         System.out.println();
-        System.out.println("COMPETITORS " + competitors.size());
-        int val = 1;
-        for (Competitor c : competitors) {
-            c.id = val;
+        System.out.println("COMPETITORS " + unsupportedCompetitors.size());
+        for (String c : unsupportedCompetitors) {
             System.out.println(c);
-            val++;
         }
+
+        // mame sparsovane eventu z databazy, v zozname mame iba podporovane entity, teraz z nich vytvorit databazu pre REST server
+        System.out.println();
+        System.out.println("nacitanych podporovanych CleanBetEventov: " + supportedEvents.size());
+
 
     }
 
@@ -199,6 +172,7 @@ public class spustac {
         }
         if (coutn != 1) {
             System.out.println("ZLY POCET POMLCIEK: [" + s + "] pocet: " + coutn);
+            throw new RuntimeException();
         }
         String[] comp = new String[2];
         s = s.substring(s.indexOf(" ")).trim();
@@ -207,13 +181,34 @@ public class spustac {
         return comp;
     }
 
-    private int getCompetitorID(CleanBetEvent cbe) {
-//        for (EventType et : eventTypes) {
-//            if (et.name_SK.equals(cbe.getTypEventu())) {
-//                return et.id;
-//            }
-//        }
-        return -1;
+    private Competitor[] getSupportedCompetitors(CleanBetEvent cbe, League league, Sport sport) {
+        if (league == null || sport == null) {
+            throw new NullPointerException("league alebo sport je NULL");
+        }
+        // vyparsujeme competitorov a zistime ci existuju nejaki neplatni
+        String[] strings = parseCompetitors(cbe.getCompetitors());
+        Competitor[] supported = new Competitor[2];
+        // competitori sa porovnavaju iba podla name, id sportu a id ligy
+        Competitor c1 = new Competitor();
+        c1.name = strings[0];
+        c1.league_ID = league.id;
+        c1.sport_ID = sport.id;
+        Competitor c2 = new Competitor();
+        c2.name = strings[1];
+        c2.league_ID = league.id;
+        c2.sport_ID = sport.id;
+        // nastavime hladaneho competitora aby ked sa nenajde sme vedeli jeho meno si zaznamenat aspon
+        supported[0] = c1;
+        supported[1] = c2;
+        for (Competitor c : competitors) {
+            if (c1.equals(c)) {
+                supported[0] = c;
+            }
+            if (c2.equals(c)) {
+                supported[1] = c;
+            }
+        }
+        return supported;
     }
 
     private EventType getEventTypeForBetEvent(CleanBetEvent cbe) {
@@ -244,6 +239,63 @@ public class spustac {
     }
 }
     /*
+       // init competitors map pre potreby pridavania vsetkych competitorov, ked uz bude nejaka databaza competitorov tak sa competitori budu overovat ci nie su duplikaty existujucich len inaksie pomenovani
+//        Map<String, Map<String, Set<String>>> competitorsMap = new HashMap<>();
+//        for (Sport s : sports) {
+//            competitorsMap.put(s.name_SK, new HashMap<String, Set<String>>());
+//        }
+//        for (League league : leagues) {
+//            Sport s = getSportFromID(league);
+//            competitorsMap.get(s.name_SK).put(league.name_SK, new HashSet<String>());
+//        }
+//        competitorsMap.get("Tenis").put("Tenis", new HashSet<String>());
+//        System.out.println(competitorsMap);
+                // PRIDAVANIE COMPETITOROV- len treba overit ci uz nepridavame tych istych
+            // ked je sport aj liga supportovana, tak automaticky pridame competitora
+//            if (sport != null) {
+//                if (league != null) {
+//                    // pridame competitora ku sportu aj lige
+//                    String[] competitori = parseCompetitors(cbe.getUnsupportedCompetitors());
+//                    for (int i = 0; i < competitori.length; i++) {
+//                        if (!competitorsMap.get(sport.name_SK).get(league.name_SK).contains(competitori[i])) {
+//                            competitorsMap.get(sport.name_SK).get(league.name_SK).add(competitori[i]);
+//                            Competitor novy = new Competitor();
+//                            novy.league_ID = league.id;
+//                            novy.sport_ID = sport.id;
+//                            novy.name = competitori[i];
+//                            competitors.add(novy);
+//                        }
+//                    }
+//                } else if (!sport.leagueRequired) {
+//                    // ak podporujeme sport ale nepodporujeme ligu, tak ak ligu nemusime podporovat (napriklad Tenis),
+//                    // tak este mozeme tiez pridat competitora, ale u competitora uz je liga irelevantna
+//                    String[] competitori = parseCompetitors(cbe.getUnsupportedCompetitors());
+//                    for (int i = 0; i < competitori.length; i++) {
+//                        try {
+//                            if (!competitorsMap.get(sport.name_SK)
+//                                    .get(sport.name_SK)
+//                                    .contains(competitori[i])) {
+//                                competitorsMap.get(sport.name_SK).get(sport.name_SK).add(competitori[i]);
+//                                Competitor novy = new Competitor();
+//                                //novy.league_ID = league.id; //ligu nam netreba lebo je to tenis napriklad a tma je liga nepodstatna
+//                                novy.sport_ID = sport.id;
+//                                novy.name = competitori[i];
+//                                competitors.add(novy);
+//                            }
+//                        } catch (Exception e) {
+//                            System.out.println("sportname: " + sport.name_SK);
+//                            Logger.getLogger(spustac.class.getName()).log(Level.SEVERE, null, e);
+//                            throw e;
+//                        }
+//                    }
+//                }
+//            }
+
+
+
+
+
+
     private Sport getSport(String sport, ArrayList<Sport> sporty) {
         for (Sport sp : sporty) {
             if (sp.name_SK.equals(sport)) {
